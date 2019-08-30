@@ -10,7 +10,7 @@ pipeline {
 			steps {
 				sh 'echo "Hellow World"'
 				withAWS(credentials:'aws-static') {
-    				s3Upload(file:'index.html', bucket:'kentsaiawsstatic', path:'/index.html')
+    				s3Upload(file:'index.html', bucket:'kentsaiawsstatic', path:'index.html')
 				}
 			}
 		}
